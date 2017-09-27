@@ -36,7 +36,7 @@ freely without using a Microsoft Azure Account.
 In this book, we cover Continuous Integration and Continuous Delivery for Azure
 Functions, so it is essential to have a Visual Team Studio Services (VSTS) account and some
 basic knowledge of it. You can utilize the Implementing DevOps with Microsoft Azure book
-available at https://www. amazon. com/Implementing-DevOps-Microsoft-Azure-Miteshebook/dp/B01MSQWO4W for DevOps, Microsoft Azure, and VSTS-related basic knowledge. It
+available at https://www.amazon.com/Implementing-DevOps-Microsoft-Azure-Miteshebook/dp/B01MSQWO4W for DevOps, Microsoft Azure, and VSTS-related basic knowledge. It
 is good to have some knowledge of repositories such as svn and Git as in Continuous
 Integration and Continuous Delivery. For Azure Functions, we are going to use a VSTS
 repository to store the code for the functions.
