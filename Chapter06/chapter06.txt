@@ -1,0 +1,282 @@
+<html> 
+    <head> 
+        <title>Add User Details</title> 
+        <meta charset="UTF-8"> 
+        <meta name="application-name" content="User Details"> 
+        <meta content="initial-scale=1.0, width=device-width" name="viewport"> 
+        <link rel="stylesheet" href="css/bootstrap.min.css"/> 
+        <link rel="stylesheet" href="css/user.css"/> 
+    </head> 
+    <body> 
+        <div class="start"> 
+            <div class="header"> 
+                <div class="text-center">User Details Form</div> 
+            </div> 
+            <div class="login"> 
+            <form class="form-horizontal" autocomplete="off" name="userForm" id="userForm"> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Id:<input type="text" class="form-control marginAuto" id="userId" placeholder="Id" required autofocus> 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Name:<input type="text" class="form-control marginAuto"  id="username" placeholder="Username" required > 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Age:<input type="text" class="form-control marginAuto"  id="userAge" placeholder="Age" required> 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Address:<input type="text" class="form-control marginAuto"  id="userAddress" placeholder="Address" required> 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        <div id="submitDiv"> 
+                            <button id="submit" name="submit" type="submit" class="btn btn-default" ng-click="validate()">Submit</button> 
+                        </div>                         
+                    </div> 
+                </div> 
+            </form> 
+        </div> 
+            <div class="footer"><div>Footer goes here...</div></div> 
+        </div> 
+        <script src="js/jquery-1.11.3.min.js"></script> 
+        <script src="js/jquery-ui.min.js"></script> 
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="jsfiles/user.js"></script> 
+    </body> 
+</html> 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<head> 
+        <title>Add User Details</title> 
+        <meta charset="UTF-8"> 
+        <meta name="application-name" content="User Details"> 
+        <meta content="initial-scale=1.0, width=device-width" name="viewport"> 
+        <link rel="stylesheet" href="css/bootstrap.min.css"/> 
+        <link rel="stylesheet" href="css/user.css"/> 
+</head> 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<div class="header"> 
+                <div class="text-center">User Details Form</div> 
+            </div> 
+This is an heading for the form. 
+ 
+            <form class="form-horizontal" autocomplete="off" name="userForm" id="userForm"> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Id:<input type="text" class="form-control marginAuto" id="userId" placeholder="Id" required autofocus> 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Name:<input type="text" class="form-control marginAuto"  id="username" placeholder="Username" required > 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Age:<input type="text" class="form-control marginAuto"  id="userAge" placeholder="Age" required> 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        Address:<input type="text" class="form-control marginAuto"  id="userAddress" placeholder="Address" required> 
+                    </div> 
+                </div> 
+                <div class="form-group"> 
+                    <div class="col-sm-12"> 
+                        <div id="submitDiv"> 
+                            <button id="submit" name="submit" type="submit" class="btn btn-default" ng-click="validate()">Submit</button> 
+                        </div>                         
+                    </div> 
+                </div> 
+            </form>
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<div class="footer"><div>Footer goes here...</div></div>
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<script src="jsfiles/user.js"></script>
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+.start{ 
+    /* position: absolute; */ 
+    top: 0px; 
+    /* margin-left: 0; */ 
+    /* margin-top: 0; */ 
+    padding-left: 0; 
+    z-index: 10; 
+    width: 860px; 
+    height: 636px; 
+    background-color: #FFFFFF; 
+    left: 0; 
+    margin: 0 auto; 
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5); 
+} 
+.header{ 
+    height:115px; 
+    /*background-image: url("../images/background-header.png");*/ 
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5); 
+    background-color: green; 
+} 
+.left-header{ 
+    padding-top:42px; 
+    padding-left: 10px; 
+    float: left; 
+    font-size: 22px; 
+    color:#FFFFFF; 
+} 
+.right-header{ 
+    padding-top:42px; 
+    padding-left: 68%; 
+    float: left; 
+} 
+.footer { 
+    position: fixed; 
+    bottom: 0%; 
+    left: 50%; 
+    width: 860px; 
+    height: 28px; 
+    margin-left: -430px;/*Half of Width*/ 
+    background-color: green; 
+    clear: both; 
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5); 
+    text-align: center; 
+    font-size: 14px; 
+    color:#ffffff; 
+    /*font-weight: bold;*/ 
+} 
+.login{ 
+    width: 300px; 
+    margin-left: 280px; 
+    margin-top: 110px; 
+ 
+} 
+.marginAuto{ 
+    margin-left: auto; 
+    margin-right: auto; 
+} 
+ 
+#submitDiv>button{ 
+    width:300px; 
+    background-color: green; 
+    color:#ffffff; 
+        /*margin-left: 10px;*/ 
+} 
+.headerOptions{ 
+    display: none; 
+} 
+.text-center{ 
+    text-align: center; 
+    font-size: 20px; 
+    color: #fff; 
+    padding-top: 46px; 
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+$(document).ready(function() { 
+    $("#userForm").submit(function(event){ 
+        if($("#userId").val() && $("#username").val()){ 
+            var id = $("#userId").val(); 
+            var username = $("#username").val(); 
+            var age = $("#userAge").val(); 
+            var address = $("#userAddress").val(); 
+            var userJSON = JSON.stringify({ 
+                "id":id, 
+                "name":username, 
+                "age":age, 
+                "address":address 
+            }); 
+            $.ajax({ 
+                type: "POST", 
+                contentType: "application/json", 
+                url:'https://azfntest.azurewebsites.net/api/SaveDataAPI?code=YPhjNyIo4gX2X5F6Nlv/6uwuKOrszcJHpRAuQeE9AzaODOA0LCsDeA==', 
+                data: userJSON, 
+                dataType: "json" 
+            }).done(function(data) { 
+                alert(data); 
+            }).fail(function(error) { 
+                if(error.status==401){ 
+                    alert('Error code 401'); 
+                } 
+                else if(error.status==400){ 
+                    alert('Error code 400'); 
+                } 
+                else{ 
+                    alert(error); 
+                } 
+            }); 
+            event.preventDefault(); /*stop the form from submitting the normal way and refreshing the page*/ 
+        } 
+    }); 
+}); 
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+$("#userForm").submit(function(event){}) 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+if($("#userId").val() && $("#username").val()){ 
+            var id = $("#userId").val(); 
+            var username = $("#username").val(); 
+            var age = $("#userAge").val(); 
+            var address = $("#userAddress").val(); 
+            var userJSON = JSON.stringify({ 
+                "id":id, 
+                "name":username, 
+                "age":age, 
+                "address":address 
+            }); 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+$.ajax({ 
+                type: "POST", 
+                contentType: "application/json", 
+                url:'https://azfntest.azurewebsites.net/api/SaveDataAPI?code=YPhjNyIo4gX2X5F6Nlv/6uwuKOrszcJHpRAuQeE9AzaODOA0LCsDeA==', 
+                data: userJSON, 
+                dataType: "json" 
+            })
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+done(function(data) { 
+                alert(data); 
+            }) 
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+fail(function(error) { 
+                if(error.status==401){ 
+                    alert('Error code 401'); 
+                } 
+                else if(error.status==400){ 
+                    alert('Error code 400'); 
+                } 
+                else{ 
+                    alert(error); 
+                } 
+            }) 
+
+-----------------------------------------------------------------------------------------------------------------------------
+

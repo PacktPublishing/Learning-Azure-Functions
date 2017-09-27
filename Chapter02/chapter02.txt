@@ -1,0 +1,78 @@
+var Jimp = require("jimp"); 
+ 
+// JavaScript function must export a single function via module.exports 
+// To find the function and execute it 
+ 
+module.exports = (context, myBlob) => { 
+// context is a must have parameter and first parameter always 
+// context is used to pass data to and from the function 
+//context name is not fixed; it can be anything 
+ 
+    // Read Photograph with Jimp 
+    Jimp.read(myBlob).then((image) => { 
+        // Manipulate Photograph  
+      // resize the Photograph. Jimp.AUTO can be passed as one of the values. 
+        image 
+            .resize(200, 200)  
+            .quality(40) 
+            .getBuffer(Jimp.MIME_JPEG, (error, stream) => { 
+                // Check for errors while processing the Photograph. 
+                if (error) { 
+               // To print the message on log console 
+                    context.log('There was an error processing the Photograph.'); 
+               // To communicate with the runtime that function is finished to avoid timeout 
+                    context.done(error); 
+                } 
+                else { 
+               // To print the message on log console 
+                    context.log('Successfully processed the Photograph'); 
+                    // To communicate with the runtime that function is finished to avoid timeout   
+               // Bind the stream to the output binding to create a new blob 
+                    context.done(null, stream); 
+                } 
+            }); 
+    }); 
+}; 
+
+-----------------------------------------------------------------------------------------------------------------
+
+{ 
+  "bindings": [ 
+    { 
+      "name": "myBlob", 
+      "type": "blobTrigger", 
+      "direction": "in", 
+      "path": "photographs/{name}", 
+      "connection": "origphotography2017_STORAGE", 
+      "dataType": "binary" 
+    }, 
+    { 
+      "type": "blob", 
+      "name": "$return", 
+      "path": "thumbnails/{name}", 
+      "connection": "origphotography2017_STORAGE", 
+      "direction": "out" 
+    } 
+  ], 
+  "disabled": false 
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+2017-06-30T16:54:18 Welcome, you are now connected to log-streaming service.
+2017-06-30T16:54:41.202 Script for function 'photoProcessing' changed. Reloading.
+2017-06-30T16:55:01.309 Function started (Id=411e4d84-5ef0-4ca9-b963-ed94c0ba8e84)
+2017-06-30T16:55:01.371 Function completed (Failure, Id=411e4d84-5ef0-4ca9-b963-ed94c0ba8e84, Duration=59ms)
+2017-06-30T16:55:01.418 Exception while executing function: Functions.photoProcessing. mscorlib: Error: Cannot find module 'jimp'
+at Function.Module._resolveFilename (module.js:455:15)
+at Function.Module._load (module.js:403:25)
+at Module.require (module.js:483:17)
+at require (internal/module.js:20:19)
+at Object.<anonymous> (D:\home\site\wwwroot\photoProcessing\index.js:1:74)
+at Module._compile (module.js:556:32)
+at Object.Module._extensions..js (module.js:565:10)
+at Module.load (module.js:473:32)
+at tryModuleLoad (module.js:432:12)
+at Function.Module._load (module.js:424:3).
+
+------------------------------------------------------------------------------------------------------------------
