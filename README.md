@@ -51,6 +51,3 @@ Microsoft Azure Portal and work with different functions.
 
 * [Learning Functional Data Structures and Algorithms](https://www.packtpub.com/application-development/learning-functional-data-structures-and-algorithms?utm_source=github&utm_medium=repository&utm_campaign=9781785888731)
 
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
-
